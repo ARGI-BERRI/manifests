@@ -23,3 +23,9 @@ spec:
             limits:
               memory: 128Mi
               cpu: "1"
+          env:
+            - name: BUSYBOX_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sample-secret
+                  key: BUSYBOX_SECRET
