@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: appliactions
+    path: applications
     repoURL: https://github.com/ARGI-BERRI/manifests.git
     targetRevision: main
   syncPolicy:
