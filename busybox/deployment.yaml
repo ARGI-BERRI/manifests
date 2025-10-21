@@ -22,7 +22,7 @@ spec:
           resources:
             limits:
               memory: 128Mi
-              cpu: "1"
+              cpu: "0.1"
           env:
             - name: BUSYBOX_SECRET
               valueFrom:
