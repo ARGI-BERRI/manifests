@@ -1,0 +1,9 @@
+[tools]
+kubectl = "latest"
+kubeseal = "latest"
+
+[tasks.kubeseal-secret]
+run = "kubeseal --controller-namespace kubeseal --controller-name sealed-secrets --fetch-cert"
+
+[tasks.kubeseal-generate]
+run = 'kubeseal --controller-namespace kubeseal --controller-name sealed-secrets --format yaml --cert kubeseal.pem < {{arg(name="file", var=true)}}'
