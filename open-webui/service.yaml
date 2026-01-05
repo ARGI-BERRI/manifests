@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 8080
   selector:
-    app: open-webui
+    app: open-webui-deployment
