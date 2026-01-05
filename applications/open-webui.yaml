@@ -4,14 +4,25 @@ metadata:
   name: open-webui
   namespace: argocd
 spec:
-  destination:
-    namespace: open-webui
-    server: https://kubernetes.default.svc
   project: default
-  source:
-    path: open-webui
-    repoURL: https://github.com/ARGI-BERRI/manifests.git
-    targetRevision: main
+  sources:
+    - chart: open-webui
+      repoURL: https://helm.openwebui.com/
+      targetRevision: 9.0.0
+      helm:
+        releaseName: open-webui
+        valuesObject:
+          ollama:
+            enabled: false
+          pipelines:
+            enabled: false
+          openaiBaseApiUrl: "https://openrouter.ai/api/v1"
+    - path: open-webui
+      repoURL: https://github.com/ARGI-BERRI/manifests.git
+      targetRevision: main
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: open-webui
   syncPolicy:
     automated: {}
     syncOptions:
