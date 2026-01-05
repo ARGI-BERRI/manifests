@@ -35,6 +35,10 @@ spec:
               memory: 2048Mi
               cpu: "1.0"
           env:
+            - name: WEBUI_URL
+              value: "https://open-webui.argia.dev"
+            - name: ENABLE_SIGNUP
+              value: "false"
             - name: OPENAI_API_BASE_URL
               value: "https://openrouter.ai/api/v1"
             - name: OPENAI_API_KEY
