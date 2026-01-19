@@ -19,7 +19,7 @@ spec:
           openaiBaseApiUrl: "https://openrouter.ai/api/v1"
           extraEnvVars:
             - name: CHAT_STREAM_RESPONSE_CHUNK_MAX_BUFFER_SIZE
-              value: 20971520
+              value: "20971520"
     - path: open-webui
       repoURL: https://github.com/ARGI-BERRI/manifests.git
       targetRevision: main
