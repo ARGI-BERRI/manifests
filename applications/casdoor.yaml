@@ -11,6 +11,11 @@ spec:
       targetRevision: 2.273.0
       helm:
         releaseName: casdoor
+        valuesObject:
+          config: |
+            driverName = sqlite
+            dataSourceName = file:casdoor.db?cache=shared
+            dbName = casdoor
     # - path: casdoor
     #   repoURL: https://github.com/ARGI-BERRI/manifests.git
     #   targetRevision: main
