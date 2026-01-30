@@ -8,7 +8,7 @@ spec:
   sources:
     - path: .
       repoURL: oci://registry-1.docker.io/casbin/casdoor-helm-charts
-      targetRevision: v1.702.0
+      targetRevision: 2.273.0
       helm:
         releaseName: casdoor
     # - path: casdoor
