@@ -14,7 +14,7 @@ spec:
         valuesObject:
           config: |
             driverName = sqlite
-            dataSourceName = file:casdoor.db?cache=shared
+            dataSourceName = file:/conf/casdoor.db?cache=shared
             dbName = casdoor
     # - path: casdoor
     #   repoURL: https://github.com/ARGI-BERRI/manifests.git
