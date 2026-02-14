@@ -16,14 +16,16 @@ spec:
             enabled: false
           pipelines:
             enabled: false
-          openaiBaseApiUrl: "https://openrouter.ai/api/v1"
-          env:
-            OPENAI_API_KEY:
+          extraEnvVars:
+            - name: ENABLE_OLLAMA_API
+              value: "False"
+            - name: OPENAI_API_BASE_URL
+              value: "https://openrouter.ai/api/v1"
+            - name: OPENAI_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: open-webui-secrets
                   key: OPENAI_API_KEY
-          extraEnvVars:
             - name: ENABLE_IMAGE_GENERATION
               value: "True"
             - name: CHAT_STREAM_RESPONSE_CHUNK_MAX_BUFFER_SIZE
